@@ -17,11 +17,13 @@ pandoc -S -o $file.odt $file.md
 
 # Convert markdown to PDF
 echo "Converting paper to PDF document."
-pandoc -S -o $file.pdf $file.md
+pandoc replication-and-decline.md --latex-engine=pdflatex -o replication-and-decline.pdf
 
-#Converting markdown to LATEX
 echo "Converting paper to LATEX document."
 pandoc -S -o $file.tex $file.md
 
+echo "Converting paper to TXT document."
+pandoc -S -o $file.txt $file.md
+
 # Make the command line read "Converted INPUT-FILENAME to HTML, DOCX, ODT, PDF
-echo "Coverted "$file" to HTML, DOCX, ODT, PDF, and insertFileTypeHere"
+echo "Coverted $file to HTML, DOCX, ODT, PDF, TEX, and TXT."
