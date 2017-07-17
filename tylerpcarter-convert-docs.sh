@@ -25,5 +25,5 @@ pandoc -S -o $file.tex $file.md
 echo "Converting paper to TXT document."
 pandoc -S -o $file.txt $file.md
 
-# Make the command line read "Converted INPUT-FILENAME to HTML, DOCX, ODT, PDF
+# Make the command line read "Converted INPUT-FILENAME to HTML, DOCX, ODT, PDF, TXT, and TEX"
 echo "Coverted $file to HTML, DOCX, ODT, PDF, TEX, and TXT."
